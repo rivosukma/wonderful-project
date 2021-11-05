@@ -1,0 +1,107 @@
+.pagination-container{
+    display: flex;
+    justify-content: flex-end;
+    .custom-pagination{
+        p {
+            border-radius: 4px;
+            border: solid 1px #ebedf8;
+            background-color: #ffffff;
+            text-align: center;
+            opacity: 0.5;
+            margin: 0;
+            padding: 4px 10px 0;
+            line-height: 20px;
+            transition: all .3s;
+            &.cursor-pointer{
+                opacity: 0.8;
+                &:hover{
+                    opacity: 1;
+                    color: rgb(40,42,60) !important;
+                    border-color: rgb(40,42,60);
+                }
+            }
+        }
+        ul{
+            li{
+                list-style-type: none;
+                width: 30px;
+                height: 30px;
+                border-radius: 4px;
+                border: solid 1px #ebedf8;
+                background-color: #ffffff;
+                text-align: center;
+                opacity: 0.5;
+                margin: 0px 4px;
+                line-height: 27px;
+                transition: all .3s;
+                cursor: pointer;
+                &:first-child, &:last-child, &.active, &:hover{
+                    opacity: 1;
+                }
+                &:first-child, &:last-child{
+                    background-color: transparent;
+                    border-color: transparent;
+                    &:hover{
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+                }
+                &.active, &:hover{
+                    border-color: rgb(40,42,60);
+                }
+                span{
+                    line-height: 29px;
+                }
+                label{
+                    position: relative;
+                    &.arrow-page-prev{
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 11px;
+                            height: 11px;
+                            border-bottom: 1.5px solid rgb(40,42,60);
+                            border-left: 1.5px solid rgb(40,42,60);
+                            -webkit-transform: rotate(45deg) scale(1);
+                            transform: rotate(45deg) scale(1);
+                            position: absolute;
+                            top: -2px;
+                            left: 0px;
+                            &:hover{
+                                border-bottom: 1.5px solid red;
+                                border-left: 1.5px solid red;                            
+                            }
+                        }
+                        &.active:after{
+                            cursor: pointer;
+                        }
+                    }
+                    &.arrow-page-next{
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 11px;
+                            height: 11px;
+                            border-bottom: 1.5px solid rgb(40,42,60);
+                            border-left: 1.5px solid rgb(40,42,60);
+                            -webkit-transform: rotate(-135deg) scale(1);
+                            transform: rotate(-135deg) scale(1);
+                            position: absolute;
+                            top: -3px;
+                            right: 0px;
+                        }
+                        &.active:after{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        select{
+            &:focus{
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}

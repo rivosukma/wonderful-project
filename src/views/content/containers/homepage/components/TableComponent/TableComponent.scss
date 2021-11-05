@@ -1,0 +1,14 @@
+.asc-desc{
+    border-radius: 5px;
+    font-size: small;
+    margin-left: 10px;
+    border: 1px solid gainsboro;
+    background-color: transparent;
+    &:hover{
+        background-color: gainsboro;
+    }
+}
+.active-sort{
+    border-color: #007bff;
+    color: #007bff;
+}
